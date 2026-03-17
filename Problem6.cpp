@@ -1,26 +1,16 @@
 #include<iostream>
 using namespace std;
 main(){
-    cout<<"Enter the Speed:";
-    int Speed;
-    cin>> Speed;
-    if(Speed<=10){
-        cout<<"Slow";
+    int sum = 0;
+
+    for(int i = 1; i <= 100; i++) {
+        sum = sum + i;
     }
-  else if(Speed<=50){
-        cout<<"Average";
-  }
-  else if(Speed<=150){
-     cout<<"Fast";
-  }
-   else if(Speed<=1000){
-        cout<<"Ultra Fast";
-   }
-    else{
-        cout<<"Extremely Fast";
-    }
+
+
+
+    cout << "Sum of first 100 natural numbers = " << sum;
+
+
+
 }
-
-
-
-    
