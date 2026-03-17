@@ -1,16 +1,18 @@
 #include<iostream>
 using namespace std;
 main(){
-    cout<<"Enter the first word:";
-    string Word1;
-    cin>> Word1;
-    cout<<"Enter the Second word:";
-    string Word2;
-    cin>> Word2;
-    if( Word1 == Word2){
-        cout<<"yes,the words are same";
+
+    int value;
+    cout << "Please enter a Positive Number: ";
+    cin >> value;
+    while (value <= 0)
+    {                                                                          
+        cout << "Error: " << value << " is not a Positive Number." << endl;
+        cout << "Please enter a Positive Number: ";
+        cin >> value;
     }
-    else{
-        cout<<"No, words are different";
-    }
-    }
+    cout << "Program Ends" << endl;
+
+}
+
+

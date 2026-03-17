@@ -1,37 +1,92 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
-    cout<<"Enter the Name of First Brother: ";
-    string First_Brother;
-    cin>> First_Brother;
-    cout<<"Enetr the Age of First Brother: ";
-    int Age_First;
-    cin>> Age_First;
-    cout<<"Enter the Nmae of Second Brother:";
-    string Second_Brother;
-    cin>> Second_Brother;
-    cout<<"Enter the Age of Second_Brother: ";
-    int Age_Second;
-    cin>> Age_Second;
-    cout<<"Enter the Name of Third Brother: ";
-    string Third_Brother;
-    cin>> Third_Brother;
-    cout<<"Enter the Age of Third brother: ";
-    int Age_Third;
-    cin>> Age_Third;
-    if(Age_First>Age_Second){
-        if(Age_Third>Age_Second)
-        cout<<Second_Brother<<" is youngest";
-        }
+
+int main()
+{
+    string username, password;
+
+    string studentName = "";
+    int studentAge = 0;
+    string courseName = "";
+
+    int choice;
+
     
-    if(Age_Second>Age_Third){
-        if(Age_Third<Age_First)
-            cout<<Third_Brother<<" is youngest";
+    for(int i = 1; i <= 3; i++)
+    {
+        cout << "Enter Username: ";
+        cin >> username;
+
+        cout << "Enter Password: ";
+        cin >> password;
+
+        if(username == "admin" && password == "1234")
+        {
+            cout << "Login Successful"<<endl;
+            break;
+        }
+        else
+        {
+            cout << "Wrong Login"<<endl;
+        }
+
+        if(i == 3 && !(username == "admin" && password == "1234"))
+        {
+            cout << "Too many attempts. Program End."<<endl;
+            return 0;
+        }
     }
 
-if(Age_Third>Age_First){
-    if(Age_Second>Age_First)
-        cout<<First_Brother<<" is youngest";
+    for(int i = 1; i <= 5; i++)
+    {
+        cout << endl<<"---- University Management System ----"<<endl;
+        cout << "1. Add Student"<<endl;
+        cout << "2. View Student"<<endl;
+        cout << "3. Add Course"<<endl;
+        cout << "4. Exit"<<endl;
+
+        cout << "Enter Choice: ";
+        cin >> choice;
+
+        if(choice == 1)
+        {
+            cout << "Enter Student Name: ";
+            cin >> studentName;
+
+            cout << "Enter Student Age: ";
+            cin >> studentAge;
+
+            cout << "Student Added Successfully"<<endl;
+        }
+        else if(choice == 2)
+        {
+            if(studentName != "")
+            {
+                cout << "Student Name: " << studentName << endl;
+                cout << "Student Age: " << studentAge << endl;
+            }
+            else
+            {
+                cout << "No Student Record Found"<<endl;
+            }
+        }
+        else if(choice == 3)
+        {
+            cout << "Enter Course Name: ";
+            cin >> courseName;
+
+            cout << "Course Added: " << courseName << endl;
+        }
+        else if(choice == 4)
+        {
+            cout << "Program Exit"<<endl;
+            break;
+        }
+        else
+        {
+            cout << "Invalid Choice"<<endl;
+        }
     }
-}
+
     
+}

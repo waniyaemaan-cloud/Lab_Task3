@@ -1,21 +1,43 @@
 #include<iostream>
 using namespace std;
 main(){
-   int Laptop_Price=50000;
-   int Monthly_Salary;
-    int advance;
-    advance=10000*50/100;
-    int Advance_Salary;
-    Advance_Salary=advance*6;
- 
-  if(Advance_Salary>=Laptop_Price){
-     cout<<"You can buy Laptop";
+int findGCD(int a, int b)
+{
+    int gcd = 1;
+
+    for (int i = 1; i <= a && i <= b; i++)
+    {
+        if (a % i == 0 && b % i == 0)
+        {
+            gcd = i;
+        }
     }
- else{ 
-    int Advance_Salary;
-    int Months_Required=Laptop_Price/advance;
-    cout<<"Months Required to buy Laptop: "<<Months_Required;
- }
 }
 
+int findLCM(int a, int b)
+{
+    int lcm;
 
+    for (int i = 1; ; i++)
+    {
+        lcm = a * i;
+
+        if (lcm % b == 0)
+        {
+            return lcm;
+        }
+    }
+}
+
+int main()
+{
+    int num1, num2;
+
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    cout << "GCD = " << findGCD(num1, num2) << endl;
+    cout << "LCM = " << findLCM(num1, num2) << endl;
+
+}
+}
