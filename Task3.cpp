@@ -1,11 +1,12 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-main(){
-  cout<<"Please enter your Name:";
-  string name;
-  cin>> name;
-  if(name == "Waniya"){
-    cout<<"Welcome"<< name<<endl;
-
-  }
+int main(){
+    int number1,number2;
+    cout<<"Enter Number1:";
+    cin>>number1;
+    cout<<"Enter Number2:";
+    cin>>number2;
+    cout<<"Greater Number:"<<max(number1,number2);
+    return 0;
 }

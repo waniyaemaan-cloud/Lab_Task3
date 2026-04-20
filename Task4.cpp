@@ -1,16 +1,12 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-main(){
-    cout<<"Please Enter the Number:";
-    int number;
-    cin>> number;
-    int even;
-    even=number%2;
-    if(even == 0){
-        cout<<"The number is even";
-    }
-    else{
-        cout<<"The number is odd";
-    
-    }
+int main(){
+    int number1,number2;
+    cout<<"Enter Number1:";
+    cin>>number1;
+    cout<<"Enter Number2:";
+    cin>>number2;
+    cout<<"Smaller Number:"<<min(number1,number2);
+    return 0;
 }

@@ -1,13 +1,11 @@
 #include<iostream>
+#include<windows.h>
 using namespace std;
-main(){
-    cout<<"Are your friends going?";
-    char Going;
-    cin>> Going;
-    if(Going == 'y'){
-        cout<<"You are also Going!";
+int main(){
+    while(true)
+    {
+        cout<<"Name:";
+        Sleep(200);
     }
-if(Going == 'n'){
-    cout<<"You are not Going!";
-}
+    return 0;
 }

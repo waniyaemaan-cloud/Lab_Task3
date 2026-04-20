@@ -1,18 +1,22 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-    int value;
-    cout << "Please enter a Positive Number: ";
-    cin >> value;
-    while (value <= 0)
-    {                                                                          
-        cout << "Error: " << value << " is not a Positive Number." << endl;
-        cout << "Please enter a Positive Number: ";
-        cin >> value;
-    }
-    cout << "Program Ends" << endl;
-
+// Function that multiplies number by 5
+int multiplyByFive(int num) {
+    
+   int total= num * 5;
+   return total;
 }
 
+int main() {
+    int number, result;
 
+    cout << "Enter a number: ";
+    cin >> number;
+
+    result = multiplyByFive(number);
+
+    cout << "After multiplying by 5: " << result << endl;
+
+    return 0;
+}

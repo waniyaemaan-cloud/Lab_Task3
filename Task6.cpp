@@ -1,13 +1,10 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-main(){
-    cout<<"Please Enter your Name:";
-    string Name;
-    cin>> Name;
-    if(Name== "Ali" ){
-        cout<<"Welcome" <<Name;
-    }
-    if(Name != "Ali"){
-     cout<<"Try Again";
-    }
+int main(){
+    int num1;
+    cout<<"Enter the number1:";
+    cin>>num1;
+    cout<<"The square root of:"<<num1<<" is:"<<sqrt(num1);
+    return 0;
 }

@@ -1,43 +1,40 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
-int findGCD(int a, int b)
-{
-    int gcd = 1;
 
-    for (int i = 1; i <= a && i <= b; i++)
-    {
-        if (a % i == 0 && b % i == 0)
-        {
-            gcd = i;
-        }
+// Function to check Oddish or Evenish
+string checkOddishEvenish(int num) {
+    int sum = 0;
+
+    // Extract digits and calculate sum
+    sum += num % 10;
+    num = num / 10;
+
+    sum += num % 10;
+    num = num / 10;
+
+    sum += num % 10;
+    num = num / 10;
+
+    sum += num % 10;
+    num = num / 10;
+
+    sum += num % 10;
+
+    // Check if sum is odd or even
+    if (sum % 2 == 0) {
+        return "Evenish";
+    } else {
+        return "Oddish";
     }
 }
 
-int findLCM(int a, int b)
-{
-    int lcm;
+int main() {
+    int number;
 
-    for (int i = 1; ; i++)
-    {
-        lcm = a * i;
+    cout << "Enter a 5-digit number: ";
+    cin >> number;
 
-        if (lcm % b == 0)
-        {
-            return lcm;
-        }
-    }
-}
+    cout << "Result: " << checkOddishEvenish(number) << endl;
 
-int main()
-{
-    int num1, num2;
-
-    cout << "Enter two numbers: ";
-    cin >> num1 >> num2;
-
-    cout << "GCD = " << findGCD(num1, num2) << endl;
-    cout << "LCM = " << findLCM(num1, num2) << endl;
-
-}
+    return 0;
 }
